@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Web App for Box Office Forecast</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='images/icone.png') }}">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+		
+		<link href={{url_for('static',filename="fonts/material-design-iconic-font")}}>
+
+		<link href={{url_for('static',filename="fonts/material-design-iconic-font/css/material-design-iconic-font.css")}}>
+
+		<link href={{url_for('static',filename="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css")}}>
+
+		<link href={{url_for('static',filename="fonts/material-design-iconic-font/muli")}}>
+
+        <link href={{url_for('static',filename="fonts/material-design-iconic-font/poppins")}}>
+
+        <link href={{url_for('static',filename="fonts/material-design-iconic-font/fonts")}}>
+
+        <link href={{url_for('static',filename="fonts/material-design-iconic-font/css")}}>
+
+		<!-- STYLE CSS -->
+		<link href={{url_for('static',filename="css/style.css")}} rel="stylesheet" type="text/css">
+
+		<!-- ANIMATE CSS -->
+		<link href={{url_for('static',filename="css/animate.css")}} rel="stylesheet" type="text/css">
+
+
+	</head>
+	<body>
+	
+		<div class="wrapper">
+			<div class="image-holder animated fadeInLeft">
+			<h1>Box Office Forecast</h1>
+			<h5>Developed by Rian Lopes</h5>
+			</div>
+            <form method="POST" action="/predict">
+            	
+            	<div id="wizard" class="animated fadeInRight">
+            		
+            		<!-- SECTION 1 -->
+	                <h4></h4>
+	                <section>
+	                    <div class="form-row form-group">
+	                    	<div class="form-holder">
+	                    		<label for="">
+	                    		Movie name
+		                    	</label>
+	                    		<input type="text" class="form-control" name="movie_name" id="movie_name">
+	                    	</div>
+	                    </div>	
+	                    
+	                </section>	  
+					
+					
+	                <!-- SECTION 3 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		INTERNATIONAL COPRODUCTION
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Is it an international coproduction?</p>
+	                    	<div class="form-holder">
+	                    		<select name="inco" id="inco" class="form-control">
+								    <option value='null' class="option">-</option>
+									<option value='SIM' class="option">Yes</option>
+									<option value='NÃO' class="option">No</option>
+
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 4 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		FSA INVESTIMENT
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Will the movie receive public investment from the FSA?</p>
+	                    	<div class="form-holder">
+	                    		<select name="fsa" id="fsa" class="form-control">
+								   <option value="null" class="option">-</option>
+								   <option value="SIM" class="option">Yes</option>
+									<option value="NÃO" class="option">No</option>									
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+	                <!-- SECTION 5 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		GENRE
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Which genre would the movie fit in?</p>
+	                    	<div class="form-holder">
+	                    		<select name="genre" id="genre" class="form-control">
+								    <option value="null" class="option">-</option>
+									<option value="Ficção" class="option">Fiction</option>
+									<option value="Documentário" class="option">Documentary</option>
+									<option value="Animação" class="option">Animation</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 6 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		SUBTYPE
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Which subtype would the movie fit in?</p>
+	                    	<div class="form-holder">
+	                    		<select name="subtype" id="subtype" class="form-control">
+								   <option value="null" class="option">-</option>
+									<option value="Drama" class="option">Nenhum</option>
+									<option value="Família" class="option">Family</option>
+									<option value="Documentário" class="option">Documentary</option>
+									<option value="dramática" class="option">Dramatic</option>
+									<option value="Fantasia" class="option">Fantasy</option>
+									<option value="Suspense" class="option">Thriller</option>
+									<option value="Animação" class="option">Animation</option>
+									<option value="Ação" class="option">Action</option>
+									<option value="Romance" class="option">Romance</option>
+									<option value="Musical" class="option">Musical</option>
+									<option value="Aventura" class="option">Adventure</option>
+									<option value="Comédia" class="option">Comedy</option>
+									<option value="científica" class="option">Sci-fi</option>
+									<option value="Marciais" class="option">Martial</option>
+									<option value="Terror" class="option">Horror</option>
+									<option value="Faroeste" class="option">Western</option>
+									<option value="Biografia" class="option">Biography</option>
+									<option value="Esporte" class="option">Sport</option>
+									<option value="Policial" class="option">Police</option>
+									<option value="Crime" class="option">Crime</option>
+									<option value="Histórico" class="option">Historical</option>
+									<option value="Experimental" class="option">Experimental</option>
+									<option value="Guerra" class="option">War</option>
+									<option value="Outros" class="option">Other</option>
+
+									
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 7 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		DISTRIBUTOR
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">What is the distributor of the movie?</p>
+	                    	<div class="form-holder">
+	                    		<select name="distributor" id="distributor" class="form-control">
+									<option value="null" class="option">-</option>
+									<option value="COLUMBIA TRISTAR FILMES DO BRASIL LTDA" class="option">COLUMBIA TRISTAR FILMES DO BRASIL</option>
+									<option value="RESERVA NACIONAL DISTRIBUIDORA DE FILMES LTDA." class="option">RESERVA NACIONAL DISTRIBUIDORA DE FILMES</option>
+									<option value="FOX FILM DO BRASIL LTDA" class="option">FOX FILM DO BRASIL</option>
+									<option value="FREESPIRIT DISTRIBUIDORA DE FILMES LTDA." class="option">FREESPIRIT DISTRIBUIDORA DE FILMES</option>
+									<option value="CANNES PRODUÇÕES S/A" class="option">CANNES PRODUÇÕES</option>
+									<option value="WMIX DISTRIBUIDORA LTDA." class="option">WMIX DISTRIBUIDORA</option>
+									<option value="SM DISTRIBUIDORA DE FILMES LTDA" class="option">SM DISTRIBUIDORA DE FILMES</option>
+									<option value="VITRINE FILMES LTDA" class="option">VITRINE FILMES</option>
+									<option value="PROVIDENCE DISTRIBUIDORA DE FILMES LTDA - EPP" class="option">PROVIDENCE DISTRIBUIDORA DE FILMES</option>
+									<option value="ELO AUDIOVISUAL SERVIÇOS LTDA" class="option">ELO AUDIOVISUAL SERVIÇOS</option>
+									<option value="OTHER" class="option">Other</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 8 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		DIRECTOR
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Who is the director of the movie?</p>
+	                    	<div class="form-holder">
+	                    		<select name="director" id="director" class="form-control">
+									<option value="null" class="option">-</option>
+									<option value="Marcos Jorge" class="option">Marcos Jorge</option>
+									<option value="Helvécio Ratton" class="option">Helvécio Ratton</option>
+									<option value="Hugo Carvana" class="option">Hugo Carvana</option>
+									<option value="Cláudio Torres" class="option">Cláudio Torres</option>
+									<option value="Bruno Barreto" class="option">Bruno Barreto</option>
+									<option value="Daniel Filho" class="option">Daniel Filho</option>
+									<option value="Roberto Santucci" class="option">Roberto Santucci</option>
+									<option value="José Eduardo Belmonte" class="option">José Eduardo Belmonte</option>
+									<option value="Julia Rezende" class="option">Julia Rezende</option>
+									<option value="OTHER" class="option">Other</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 9 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		SCREENWRITTER
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">Who is the screenwritter of the movie?</p>
+	                    	<div class="form-holder">
+	                    		<select name="screenwritter" id="screenwritter" class="form-control">
+									<option value="null" class="option">-</option>
+									<option value="Lusa Silvestre," class="option">Lusa Silvestre</option>
+									<option value="Melanie Dimantas," class="option">Melanie Dimantas</option>
+									<option value="Paulo Halm," class="option">Paulo Halm</option>
+									<option value="Adriana Falcão," class="option">Adriana Falcão</option>
+									<option value="José Carvalho," class="option">José Carvalho</option>
+									<option value="Paulo Cursino," class="option">Paulo Cursino</option>
+									<option value="Marcelo Saback," class="option">Marcelo Saback</option>
+									<option value="Marcos Bernstein," class="option">Marcos Bernstein</option>
+									<option value="L.G. Bayão," class="option">L.G. Bayão</option>
+									<option value="OTHER" class="option">Other</option>
+								</select>
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+
+
+					<!-- SECTION 10 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		TOTAL MOVIE LENGTH
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">How long is the movie in total?</p>
+	                    	<div class="form-holder">
+								<input type="number  " class="form-control" name="movie_length" id="movie_length">
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+					<!-- SECTION 11 -->
+	                <h4></h4>
+	                <section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		YEAR OF THE PRODUCTION
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">What is the year of the production?</p>
+	                    	<div class="form-holder">
+								<input type="number  " class="form-control" name="year" id="year">
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+			
+	                <!-- SECTION 12 -->
+	                <h4></h4>
+					<section>
+	                   <div class="form-row">
+	                    	<label for="">
+	                    		EXHIBITION START DATE
+	                    	</label>
+							<h5 class="key">Description:</h5>
+							<p class = "form_desc">What will be the start date of the exhibitions?</p>
+	                    	<div class="form-holder">
+	                    		<input type="number  " class="form-control" name="start_date" id="start_date">
+								<i class="zmdi zmdi-caret-down"></i>
+	                    	</div>
+	                    </div>	
+	                </section>
+
+            	</div>
+            </form>
+		</div>
+
+		<script src={{url_for('static',filename="js/jquery-3.3.1.min.js")}} type="text/javascript"></script>
+		
+		<!-- JQUERY STEP -->
+		
+		<!-- STYLE CSS -->
+		<script src={{url_for('static',filename="js/jquery.steps.js")}} type="text/javascript"></script>
+
+		<script src={{url_for('static',filename="js/main.js")}} type="text/javascript"></script>
+
+		
+</body>
+</html>

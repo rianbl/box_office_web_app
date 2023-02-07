@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "Poppins-Regular";
+	src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+@font-face {
+	font-family: "Poppins-SemiBold";
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+@font-face {
+	font-family: "Poppins-Medium";
+	src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+@font-face {
+	font-family: "Muli-Bold";
+	src: url('../fonts/muli/Muli-Bold.ttf');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url(../images/imagem_fundo.jpg)no-repeat center center;
+  background-size: cover;  
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #F5F5F5;
+  font-family: "Poppins-Regular";
+	font-size: 15px;
+	color: #000000;
+  margin: 0;
+  font-weight: bolder;
+}
+.prediction_result {
+  background-color: #F5F5F5;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+  opacity: 0.7;
+}
+h3 {
+  margin: 0;
+}
+
+hr {
+  max-width: 150px;
+  border-width: 5px;
+  border-color: #d9bda3;
+  border-radius: 30px;
+  margin-bottom: 60px;
+}
+
+.result {
+  font-family: Poppins-SemiBold;
+}
+.res_text {
+  font-size: 25px;
+}
+.btn {
+  background-color: #d9bda3;
+  color: #000000;
+  font-family: Poppins-Regular;
+}

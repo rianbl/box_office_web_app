@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icone.png') }}">
+
+    <title>Box Office Forecast</title>
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    
+	<link href={{url_for('static',filename="fonts/material-design-iconic-font")}}>
+
+    <link href={{url_for('static',filename="fonts/material-design-iconic-font/css/material-design-iconic-font.css")}}>
+
+	<link href={{url_for('static',filename="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css")}}>
+
+    <link href={{url_for('static',filename="fonts/material-design-iconic-font/fonts/poppins/Poppins-Regular.ttf")}}>
+
+    <link href={{url_for('static',filename="fonts/material-design-iconic-font/poppins")}}>
+
+    <link href={{url_for('static',filename="fonts/material-design-iconic-font/fonts")}}>
+
+    <link href={{url_for('static',filename="fonts/material-design-iconic-font/css")}}>
+
+	<!-- STYLE CSS -->
+	<link href={{url_for('static',filename="css/main.css")}} rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+	<link href={{url_for('static',filename="Bootstrap/css/bootstrap.css")}} rel="stylesheet" type="text/css">
+
+    <!-- ANIMATE CSS -->
+	<link href={{url_for('static',filename="css/animate.css")}} rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body class="justify-content-center"> 
+    <section class="prediction_result animated fadeInDown">
+<h3 class="text-center result">Forecast:</h3>
+<hr>
+<p class="res_text text-center">{{movie_name}} will likely have an audience of {{prediction}} people.</p>
+
+        
+<div class="text-center">
+<a href="{{url_for('home')}}">
+    <button class="btn btn-md" type="submit" id="button1">New forecast</button>
+     </a>
+     </div>
+      <p class="mt-5 text-center text-black " id="end">Thanks for using this app!</p>    
+    </section>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src={{url_for('static',filename="Bootstrap/js/bootstrap.js")}} type="text/javascript"></script>
+</body>
+</html>
