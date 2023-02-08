@@ -1,8 +1,5 @@
-# Desenvolvimento de Aplicações Analíticas
+# Box office production
 
-# Projeto 2 - Web App Education Analytics Para Previsão de Performance Escolar
-
-# WebApp1
 
 # pip install scikit-learn==0.20
 # pip install setuptools --upgrade
@@ -91,8 +88,9 @@ def predict():
    
     return render_template('predict.html', prediction = model_prediction, movie_name = movie_name)        
 
+
 # Executa a app
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')  
+    app.run()  
 
 
